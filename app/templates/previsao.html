@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icon.svg') }}" type="image/x-icon">
+    <title>Previsão de Matérias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Previsão de Matérias</h1>
+
+        <h2>Ciência da Computação</h2>
+        <table>
+            {% for materia in materias_cc %}
+            <tr class="{% if materia in materias_cursadas %}cursada{% endif %}">
+                <td>{{ materia.codigo }}</td>
+                <td>{{ materia.nome }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Engenharia de Software</h2>
+        <table>
+            {% for materia in materias_es %}
+            <tr class="{% if materia in materias_cursadas %}cursada{% endif %}">
+                <td>{{ materia.codigo }}</td>
+                <td>{{ materia.nome }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Engenharia de Produção</h2>
+        <table>
+            {% for materia in materias_ep %}
+            <tr class="{% if materia in materias_cursadas %}cursada{% endif %}">
+                <td>{{ materia.codigo }}</td>
+                <td>{{ materia.nome }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icon.svg') }}" type="image/x-icon">
+    <title>Todas as Matérias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    
+        <h1>Todas as Matérias</h1>
+        <div class="navigation">
+            <a href="{{ url_for('index') }}" class="btn">Ir para o inicio</a>
+        </div>
+        <div class="tables-container">
+            <!-- Blocos de tabelas para cada natureza -->
+            <!-- (O mesmo código que você já possui, para exibir as matérias) -->
+        </div>
+    </div>
+</body>
+</html>
+
+            
+            <!-- Matérias OB -->
+            <div>
+                <h2>OB</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for materia in materias if materia.natureza == 'OB' %}
+                        <tr>
+                            <td>{{ materia.codigo }}</td>
+                            <td>{{ materia.nome }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Matérias OX -->
+            <div>
+                <h2>OX</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for materia in materias if materia.natureza == 'OX' %}
+                        <tr>
+                            <td>{{ materia.codigo }}</td>
+                            <td>{{ materia.nome }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Matérias OZ -->
+            <div>
+                <h2>OZ</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for materia in materias if materia.natureza == 'OZ' %}
+                        <tr>
+                            <td>{{ materia.codigo }}</td>
+                            <td>{{ materia.nome }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Matérias OG -->
+            <div>
+                <h2>OG</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for materia in materias if materia.natureza == 'OG' %}
+                        <tr>
+                            <td>{{ materia.codigo }}</td>
+                            <td>{{ materia.nome }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Matérias OH -->
+            <div>
+                <h2>OH</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for materia in materias if materia.natureza == 'OH' %}
+                        <tr>
+                            <td>{{ materia.codigo }}</td>
+                            <td>{{ materia.nome }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

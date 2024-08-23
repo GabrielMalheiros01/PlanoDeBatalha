@@ -1,0 +1,17 @@
+Comandos para abrir/fechar MV:
+nome_do_ambiente\Scripts\activate
+deactivate
+
+
+rodar aplicação: python run.py
+
+
+Modelo do Fluxo - Flask:
+
+Model- Banco de dados
+
+view - Arquivos visuais
+
+Controller - parte logica, crud
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icon.svg') }}" type="image/x-icon">
+    <title>Upload de Arquivos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo</h1>
+        <form action="{{ url_for('cursadas') }}" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                <label for="file-upload" class="custom-file-upload">
+                    Selecione o arquivo PDF
+                </label>
+                <input id="file-upload" type="file" name="pdf" accept=".pdf"/>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
