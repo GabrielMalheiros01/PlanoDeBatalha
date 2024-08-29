@@ -1,0 +1,95 @@
+body{
+    background-color: #FED966;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FED966;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #F9A72B;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF8C00;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.table-block {
+    background-color: #FFE08A;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 22%; /* Aumentado para caber todas as 4 colunas na mesma linha */
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #D26900;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    font-size: 12px; /* Tamanho da fonte reduzido */
+}
+
+thead {
+    background-color: #F9A72B;
+    color: #fff;
+}
+
+th, td {
+    padding: 5px; /* Padding reduzido */
+    text-align: left;
+    border: 1px solid black;
+}
+
+.cursada {
+    background-color: #389602; /* Verde claro */
+    color: #ffff;
+}

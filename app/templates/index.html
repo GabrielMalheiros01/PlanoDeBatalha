@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bem-vindo</h1>
-        <form action="{{ url_for('cursadas') }}" method="post" enctype="multipart/form-data">
+        <h1>BEM-VINDE!</h1>
+        <form id="upload-form" action="{{ url_for('cursadas') }}" method="post" enctype="multipart/form-data">
             <div class="input-group">
                 <label for="file-upload" class="custom-file-upload">
-                    Selecione o arquivo PDF
+                    SELECIONE O ARQUIVO PDF
                 </label>
-                <input id="file-upload" type="file" name="pdf" accept=".pdf"/>
+                <input id="file-upload" type="file" name="pdf" accept=".pdf" required/>
             </div>
-            <button type="submit">Enviar</button>
+            <p id="file-name"></p>
+            <button type="submit" class="btn">ENVIAR</button>
         </form>
     </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

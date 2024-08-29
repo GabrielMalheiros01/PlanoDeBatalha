@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ url_for('static', filename='icon.svg') }}" type="image/x-icon">
     <title>Matérias Cursadas</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stilo.css') }}">
 </head>
 <body>
     <div class="container">
-        <div class="navigation">
-            <a href="{{ url_for('todas') }}" class="btn">Ir para todas as Materias</a>
+
+        <div class="header">
+            <div class="title">Matérias Cursadas</div>
+            <div class="navigation">
+                <a href="{{ url_for('index') }}" class="btn">Início</a>
+                <a href="{{ url_for('todas') }}" class="btn">Todas as Matérias</a>
+                <a href="{{ url_for('previsao') }}" class="btn">Área de concentração</a>
+            </div>
         </div>
-        <h1>Matérias Cursadas</h1>
+
+        
         {% if materias_cursadas %}
         <div class="tables-container">
-            {% for natureza in ['OB', 'OX', 'OZ', 'OG', 'OH'] %}
+            {% for natureza in ['OB', 'OG', 'OX', 'OH', 'OZ'] %}
             <div class="table-block">
                 <h2>Natureza {{ natureza }}</h2>
                 <table>
@@ -27,10 +33,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for materia in materias_cursadas if materia.natureza == natureza %}
+                        {% for materia in materias_cursadas if materia[2] == natureza %}
                         <tr>
-                            <td>{{ materia.codigo }}</td>
-                            <td>{{ materia.nome }}</td>
+                            <td>{{ materia[0] }}</td>
+                            <td>{{ materia[1] }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

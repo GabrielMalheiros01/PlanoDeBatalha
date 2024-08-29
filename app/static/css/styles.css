@@ -1,113 +1,75 @@
+/* Estilo geral para o body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #FFECB3;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    text-align: center;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
+/* Estilo para o container principal */
 .container {
-    margin-top: 100px; /* Espaço para o header fixo */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: #FFF9C4;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 90%; /* Ajustando a largura para acomodar o conteúdo */
-    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    width: 350px;
 }
 
-.tables-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px; /* Espaço entre as tabelas */
-    flex-wrap: wrap; /* Quebra as tabelas para a próxima linha, se necessário */
+/* Estilo para o título */
+h1 {
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 20px;
 }
 
-.table-block {
-    flex: 1;
-    min-width: 200px; /* Largura mínima para as tabelas */
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 12px; /* Reduzindo o tamanho da fonte */
-}
-
-th, td {
-    padding: 8px; /* Reduzindo o padding */
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-tbody tr:hover {
-    background-color: #f5f5f5;
-}
-
-h2 {
-    text-align: center;
-    font-size: 16px; /* Ajustando o tamanho da fonte do título */
-    margin-bottom: 10px; /* Margem inferior reduzida */
-}
-
+/* Estilo para o grupo de inputs */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .custom-file-upload {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 25px;
     cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #007bff;
+    border: 2px solid #FFA000;
+    border-radius: 10px;
+    background-color: #FFB74D;
     color: white;
+    font-weight: bold;
 }
 
 #file-upload {
     display: none;
 }
 
+/* Estilo para o botão de envio */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1.2em;
     text-align: center;
     text-decoration: none;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #FFF;
+    background-color: #FFD54F;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
 }
 
-.btn {
-    background-color: #0056b3;
+/* Estilo para o botão quando passa o mouse sobre ele */
+.btn:hover {
+    background-color: #FFC107;
+    transform: translateY(-2px);
 }
-.cursada {
-    background-color: #98FB98; /* Verde claro */
+
+/* Estilo para o botão quando ele está ativo */
+.btn:active {
+    background-color: #FFB300;
+    transform: translateY(0);
 }
