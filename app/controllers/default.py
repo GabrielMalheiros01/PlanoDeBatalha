@@ -18,9 +18,14 @@ def process_pdf(file_path):
     for page in pdf_reader:
         extracted_text += page.get_text()
 
-    pattern = re.compile(r'(CTIA\d{2}|CTIB\d{2})')
-    matches = pattern.findall(extracted_text)
+   pattern = re.compile(r'(CTIA\d{2}|CTIB\d{2})\s+.*?\s+(AP|RR|RF|TR)', re.DOTALL)
+    ap_matches = pattern.findall(extracted_text)
     
+    matches = []
+    for match in ap_matches:
+        cod, status = match
+        if status == 'AP':
+            matches.append(cod)
 
     materias_cursadas = Materias.query.filter(Materias.codigo.in_(matches)).all()
 
