@@ -13,12 +13,12 @@ def process_pdf(file_path):
     # Abrir o PDF
     pdf_reader = fitz.open(file_path)
     extracted_text = ""
-
+    
     # Extrair texto de todas as páginas do PDF
     for page in pdf_reader:
         extracted_text += page.get_text()
-
-   pattern = re.compile(r'(CTIA\d{2}|CTIB\d{2})\s+.*?\s+(AP|RR|RF|TR)', re.DOTALL)
+    
+    pattern = re.compile(r'(CTIA\d{2}|CTIB\d{2})\s+.*?\s+(AP|RR|RF|TR)', re.DOTALL)
     ap_matches = pattern.findall(extracted_text)
     
     matches = []
@@ -28,10 +28,10 @@ def process_pdf(file_path):
             matches.append(cod)
 
     materias_cursadas = Materias.query.filter(Materias.codigo.in_(matches)).all()
-
+    
     resultado = [(materia.codigo, materia.nome,materia.natureza) for materia in materias_cursadas]
     return resultado
-
+    
 @app.route("/", methods=['GET'])
 def index():
     return render_template("index.html")
